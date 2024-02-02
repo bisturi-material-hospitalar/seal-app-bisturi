@@ -1,0 +1,424 @@
+<style>
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+    .table-box {
+        display: table;
+        width: 100%;
+        border: solid 0.5 #c0bfbf;
+        border-collapse: collapse;
+    }
+    
+    .row-box {
+        display: table-row;
+        background-color: #f1f1f1;
+        position: relative;
+    }
+    
+    .row-box2 {
+        display: table-row;
+        background-color: #dcdcdc;
+        position: relative;
+    }
+    
+    .cel-box {
+        display: table-cell;
+        padding: 5px;
+        margin: 5px;
+        border: #c0bfbf solid 0.5px;
+    }
+    
+    .description-prod {
+        color: #000000;
+    }
+    
+    .description-prod h2 {
+        text-align: center;
+    }
+    
+    .sigvaris-description {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        border-top: #b8b5dd solid 0.5px;
+        box-sizing: border-box;
+    }
+    
+    .sigvaris-description h3 {
+        font-size: 20px;
+        text-align: center;
+        color: #011e52;
+        font-weight: 500;
+    }
+    
+    .sigvaris-description ul {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    
+    .sigvaris-description li {
+        vertical-align: baseline;
+        text-size-adjust: 100%;
+        margin: 10px;
+    }
+    
+    .sigvaris-description span {
+        margin: 5px;
+        font-size: 20px;
+        background-color: #9491c8;
+        border-radius: 25%;
+        color: #ffffff;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .sigvaris-como-medir {
+        display: flex;
+        width: 100%;
+    }
+    
+    .sigvaris-como-medir img {
+        max-width: 35px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
+    .sigvaris-como-medir h3 {
+        font-size: 20px;
+        text-align: center;
+        color: #011e52;
+        font-weight: 500;
+    }
+    
+    .col-s5 {
+        width: 50%;
+    }
+    
+    .col-s5 div {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        font-size: 16px;
+        vertical-align: top;
+        font-weight: 300;
+        margin: 5px;
+    }
+    
+    .table-sigvaris {
+        display: block;
+    }
+    
+    .table-sigvaris h3 {
+        color: #7873b2;
+        font-size: xx-large;
+        font-weight: 100;
+    }
+    
+    .img-medidas {
+        display: flex;
+        max-width: 200px;
+        margin: 10px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    
+    .table-sigvaris .medidas-sigvaris {
+        overflow-x: scroll;
+        width: 100% !important;
+    }
+    
+    .table-sigvaris table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: max-content;
+    }
+    
+    .table-sigvaris td {
+        text-align: center;
+        border: solid #202020 1px;
+        padding: 5px;
+    }
+    
+    .table-sigvaris img {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+    
+    .sigvaris-table-cel1 {
+        background-color: #9491c8;
+        color: #ffffff;
+        font-size: 16px;
+    }
+    
+    .sigvaris-table-cel2 {
+        font-size: 18px;
+    }
+    
+    .sigvaris-table-cel3 {
+        background-color: #cbc6e4;
+        color: #000000;
+        text-align: left !important;
+    }
+    
+    .sigvaris-table-cel4 {
+        background-color: #9491c8;
+        color: #000000;
+        text-align: left !important;
+    }
+    
+    .sigvaris-beneficios {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        align-content: flex-start;
+    }
+    
+    .sigvaris-beneficios span {
+        font-size: 16px;
+        color: #7873b2;
+        font-weight: 600;
+    }
+    
+    .sigvaris-beneficios div {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        flex-wrap: nowrap;
+        padding: 5px;
+        width: 60%;
+        align-items: center;
+        box-sizing: border-box;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-radius: 10px;
+    }
+    
+    .sigvaris-beneficios img {
+        width: 80px;
+        height: 80;
+        margin: 10px;
+    }
+    
+    .img-box-sigvaris {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        flex: 1;
+        overflow-x: scroll;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .img-box-sigvaris img {
+        width: 200px;
+        height: auto;
+        padding: 5px;
+        margin: .5rem;
+    }
+    
+    @media screen and (max-width: 878px) {
+        .sigvaris-como-medir {
+            display: block;
+        }
+        .col-s5 {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 639px) {
+        .table-sigvaris h3 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .table-sigvaris .img-medidas {
+            max-width: 150px;
+        }
+        .sigvaris-beneficios div {
+            flex-direction: column;
+            text-align: center;
+            padding: 1rem;
+            min-width: 200px;
+            margin: .5rem;
+        }
+        .sigvaris-beneficios {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+        .sigvaris-description {
+            display: block;
+        }
+    }
+</style>
+<div class="description-prod">
+    <h2><strong>Meia de Compressão Sigvaris Select Comfort Premium Meia-Coxa 20-30 mmHg Natural - Ponteira Fechada - Tamanho P2</strong></h2>
+    <p>A <strong>Meia de Compressão Sigvaris Essencial Conforto SELECT COMFORT PREMIUM</strong> é revestida internamente com microfibra, que auxilia a transferência da umidade da pele (suor) para o meio externo, oferecendo uma agradável sensação climática,
+        além de tornar o produto mais sedoso, confortável e mais fácil de calçar.</p>
+    <p>Eficaz para o tratamento das doenças venosas e linfáticas com manifestações leves, moderadas e graves.</p>
+
+    <div class="sigvaris-description">
+        <h3>COMO VESTIR SUA MEIA</h3>
+        <ul>
+            <li><i class="fa fa-check-circle" style="font-size:25px;color:#7873b2; margin-right:.5rem;"></i>Utilize a sapatilha (quando houver) para Modelos ponteira aberta</li>
+            <li><i class="fa fa-check-circle" style="font-size:25px;color:#7873b2; margin-right:.5rem;"></i>Coloque a mão dentro da meia e segure o tecido próximo ao calcanhar</li>
+            <li><i class="fa fa-check-circle" style="font-size:25px;color:#7873b2; margin-right:.5rem;"></i>Com a outra mão, vire a meia do avesso até o ponto que você está segurando</li>
+            <li><i class="fa fa-check-circle" style="font-size:25px;color:#7873b2; margin-right:.5rem;"></i>Calce a meia no pé ajustando-a bem até o calcanhar e vá desvirando a meia aos poucos, subindo-a na perna</li>
+            <li><i class="fa fa-check-circle" style="font-size:25px;color:#7873b2; margin-right:.5rem;"></i>Faça os ajustes finais, para que a meia fique sem dobras e bem ajustada à perna</li>
+            <li><i class="fa fa-check-circle" style="font-size:25px;color:#7873b2; margin-right:.5rem;"></i>Retire a sapatilha (quando houver e para modelos ponteira aberta)</li>
+        </ul>
+    </div>
+    <div class="img-box-sigvaris">
+        <img src="https://tfchmj.vteximg.com.br/arquivos/ids/276926/como-vestir-sua-meia-4.png" title="Como vestir a meia de compressão sigvaris 4" alt="Imagem de como vestir a meia sigvaris" />
+        <img src="https://tfchmj.vteximg.com.br/arquivos/ids/276925/como-vestir-sua-meia-3.png" title="Como vestir a meia de compressão sigvaris 3" alt="Imagem de como vestir a meia sigvaris" />
+        <img src="https://tfchmj.vteximg.com.br/arquivos/ids/276924/como-vestir-sua-meia-2.png" title="Como vestir a meia de compressão sigvaris 2" alt="Imagem de como vestir a meia sigvaris" />
+        <img src="https://tfchmj.vteximg.com.br/arquivos/ids/276923/como-vestir-sua-meia-1.png" title="Como vestir a meia de compressão sigvaris 1" alt="Imagem de como vestir a meia sigvaris" />
+    </div>
+    <div class="table-sigvaris">
+        <h3>ESSENCIAL CONFORTO SELECT COMFORT PREMIUM <br />MEIA COXA</h3>
+        <div class="img-medidas">
+            <img src="https://tfchmj.vteximg.com.br/arquivos/ids/284204/medida-meia-coxa-sigvaris-select-comfort-premium.jpg">
+        </div>
+        <div class="medidas-sigvaris">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="border: none;"> </td>
+                        <td colspan="3" class="sigvaris-table-cel1">Pequeno</td>
+                        <td colspan="3" class="sigvaris-table-cel1">Médio</td>
+                        <td colspan="3" class="sigvaris-table-cel1">Grande</td>
+                        <td colspan="3" class="sigvaris-table-cel1">Extra Grande</td>
+                    </tr>
+                    <tr>
+                        <td class="sigvaris-table-cel3"><strong>Tornozelo</strong><br />Circunferência (b)</td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>18-21 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>21-24 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>24-27 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>27-32 cm</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="sigvaris-table-cel3"><strong>Panturrilha</strong><br />Circunferência (c)</td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>28-35 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>32-39 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>36-43 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>43-51 cm</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="sigvaris-table-cel3"><strong>Coxa</strong><br />Circunferência (g)</td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>46-60 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>53-68 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>60-76 cm</strong></td>
+                        <td colspan="3" class="sigvaris-table-cel2"><strong>68-84 cm</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="sigvaris-table-cel4"><strong>A-G</strong><br />Comprimento</td>
+                        <td><strong>Curto</strong><br />50 - 60 cm</td>
+                        <td><strong>Normal</strong><br />61 - 70 cm</td>
+                        <td><strong>Longo</strong><br />71 a 80 cm</td>
+                        <td><strong>Curto</strong><br />50 - 60 cm</td>
+                        <td><strong>Normal</strong><br />61 - 70 cm</td>
+                        <td><strong>Longo</strong><br />71 - 80 cm</td>
+                        <td><strong>Curto</strong><br />50 - 60 cm</td>
+                        <td><strong>Normal</strong><br />61 - 70 cm</td>
+                        <td><strong>Longo</strong><br />71 - 80 cm</td>
+                        <td><strong>Curto</strong><br />ND</td>
+                        <td><strong>Normal</strong><br />Acima de 71 cm </td>
+                        <td><strong>Longo</strong><br />Acima de 71 cm</td>
+                    </tr>
+                    <tr>
+                        <td class="sigvaris-table-cel4"><strong>Tamanho</strong></td>
+                        <td><strong>P1</strong></td>
+                        <td><strong>P2</strong></td>
+                        <td><strong>P3</strong></td>
+                        <td><strong>M1</strong></td>
+                        <td><strong>M2</strong></td>
+                        <td><strong>M3</strong></td>
+                        <td><strong>G1</strong></td>
+                        <td><strong>G2</strong></td>
+                        <td><strong>G3</strong></td>
+                        <td><strong>GG1</strong></td>
+                        <td><strong>GG2</strong></td>
+                        <td><strong>GG3</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3><strong>Benefícios</strong></h3>
+    <div class="sigvaris-beneficios">
+        <div><img src="https://tfchmj.vteximg.com.br/arquivos/ids/276910/tecnologia-sig-clean.png" title="Tecnologia SIG-CLEAN" alt="Ícone do benefícios Tecnologia SIG-CLEAN da meia de compressão sigvaris" />
+            <p><span>Tecnologia SIG-CLEAN</span><br /> Tecnologia que inibe o crescimento de bactérias na meia e não sai na lavagem, garantindo mais segurança e protegendo contra o mau odor.</p>
+        </div>
+        <div><img src="https://tfchmj.vteximg.com.br/arquivos/ids/276907/clima-control.png" title="Clima Control" alt="Ícone do benefícios Clima Control da meia de compressão sigvaris" />
+            <p><span>Clima Control</span><br /> Tecnologia SIGVARIS GROUP que proporciona uma melhor sensação térmica durante o uso e em todas as estações do ano.</p>
+        </div>
+        <div><img src="https://tfchmj.vteximg.com.br/arquivos/ids/276908/excelente-elasticidade.png" title="Excelente Elasticidade" alt="Ícone do benefícios Excelente Elasticidade da meia de compressão sigvaris" />
+            <p><span>Excelente Elasticidade</span><br /> O Fio Lycra® garante maior elasticidade e compressão, garantindo maior conforto e facilidade ao calçar.</p>
+        </div>
+        <div><img src="https://tfchmj.vteximg.com.br/arquivos/ids/276909/variedade-de-modelos.png" title="Variedade de Modelos" alt="Ícone do benefícios Variedade de Modelos da meia de compressão sigvaris" />
+            <p><span>Variedade de Modelos</span><br /> Maior variedade de modelos do mercado, sendo mais de 180 combinações.
+                <br /> Tratamento personalizado e eficácia garantida.
+        </div>
+        <div><img src="https://tfchmj.vteximg.com.br/arquivos/ids/276906/calcanhar-anatomico.png" title="Calcanhar Anatômico" alt="Ícone do benefícios Calcanhar Anatômico da meia de compressão sigvaris" />
+            <p><span>Calcanhar Anatômico</span><br /> Melhor adaptação e segurança para os pés.
+        </div>
+    </div>
+    <h3><strong>Características</strong></h3>
+    <div class="table-box">
+        <div class="row-box2">
+            <div class="cel-box"><strong>Modelo:</strong></div>
+            <div class="cel-box"> Meia-Coxa</div>
+        </div>
+        <div class="row-box">
+            <div class="cel-box"><strong>Composição:</strong></div>
+            <div class="cel-box">Poliamida: 72%<br />Elastano:28%</div>
+        </div>
+        <div class="row-box2">
+            <div class="cel-box"><strong>Cor:</strong></div>
+            <div class="cel-box"> Natural;</div>
+        </div>
+        <div class="row-box">
+            <div class="cel-box"><strong>Tamanho:</strong></div>
+            <div class="cel-box"> P2;</div>
+        </div>
+        <div class="row-box2">
+            <div class="cel-box"><strong>Comprimento:</strong></div>
+            <div class="cel-box"> Normal (61 a 70 cm);</div>
+        </div>
+        <div class="row-box">
+            <div class="cel-box"><strong>Tipo de ponteira:</strong></div>
+            <div class="cel-box"> Aberta;</div>
+        </div>
+        <div class="row-box2">
+            <div class="cel-box"><strong>Tornozelo:</strong></div>
+            <div class="cel-box"> 18 - 21 cm;</div>
+        </div>
+        <div class="row-box">
+            <div class="cel-box"><strong>Panturrilha:</strong></div>
+            <div class="cel-box"> 28 - 35 cm;</div>
+        </div>
+        <div class="row-box2">
+            <div class="cel-box"><strong>Coxa:</strong></div>
+            <div class="cel-box"> 46 - 60 cm;</div>
+        </div>
+        <div class="row-box2">
+            <div class="cel-box"><strong>Compressão:</strong></div>
+            <div class="cel-box"> 20-30 mmHg.</div>
+        </div>
+    </div>
+    <p>
+        <img src="https://tfchmj.vteximg.com.br/arquivos/ids/276142/icon-fabricadobrasil.png" alt="icone" title="Fabricado no Brasil" width="150px" height="auto" />
+    </p>
+    <p><strong>ANVISA:</strong>10103570001</p>
+    <div>As cores apresentadas no site são meramente ilustrativas e podem ou não corresponder com exatidão à tonalidade aplicada.
+        <br />Para mais informações sobre manuseio e cuidados quanto ao uso do produto, consulte o Manual do Usuário.
+        <br />Imagem meramente ilustrativa e a descrição do produto é de responsabilidade do fabricante.
+    </div>
+</div>
