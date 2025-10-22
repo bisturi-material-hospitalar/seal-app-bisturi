@@ -1,0 +1,14 @@
+{
+  "securitysealapp": {
+    "component": "SecuritySale"
+  },
+  "kobeappbanner": {
+    "component": "BannerApp"
+  },
+  "button-whatsapp": {
+    "component": "ButtonWhatsapp"
+  },
+  "pix-price": {
+    "component": "PixPrice"
+  }
+}
