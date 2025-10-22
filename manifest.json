@@ -1,7 +1,7 @@
 {
   "vendor": "tfchmj",
   "name": "securitysealapp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "title": "Bisturi Security Seal + Kobe App Banner",
   "description": "Selo de Segurança do Reclame aqui e Banner no Mobile que redireciona para baixar o App da Loja",
   "builders": {
